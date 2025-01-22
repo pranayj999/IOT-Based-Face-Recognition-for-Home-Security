@@ -61,9 +61,10 @@ Run train_faces.py to train the recognizer.
 
 
 5. Start the recognition system:
-python main.py
+  ```
+   pip install opencv-python opencv-contrib-python numpy
 
-
+```
 # Usage
 
 Register Faces: Capture faces and save them to the dataset.
@@ -72,33 +73,33 @@ Run System: Recognize faces and control the door lock, alarm, and SMS notificati
 
 #Project Structure:
 
+```
 .
 ├── register_face.py         # Script for capturing and saving face images
-
 ├── train_faces.py           # Script for training the LBPH recognizer
-
 ├── main.py                  # Main script for real-time face recognition
-
 ├── face_recognizer.yml      # Trained model file (generated after training)
-
 ├── label_map.npy            # Label map for face recognition
-
 ├── requirements.txt         # Python dependencies
-
 ├── README.md                # Project documentation
 
-
+```
 # Example AT Commands
 
 Set SMS Mode: AT+CMGF=1
+
 Send SMS: AT+CMGS="+1234567890"
+
 Check SIM Status: AT+CPIN?
+
 Check Network Registration: AT+CREG?
 
 # Future Enhancements:
 
 Cloud-based face data storage.
+
 Integration with smart home ecosystems.
+
 Enhanced face detection using deep learning models.
 
 
