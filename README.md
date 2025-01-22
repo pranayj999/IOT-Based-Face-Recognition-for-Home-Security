@@ -45,21 +45,26 @@ An IoT-powered system for secure door access using facial recognition. This proj
    cd iot-facial-recognition
    Install dependencies:
 2. Install dependencies:
-pip install opencv-python opencv-contrib-python numpy
 
-#Connect and configure hardware components:
+   ```
+   pip install opencv-python opencv-contrib-python numpy
+
+3. Connect and configure hardware components:
+
 Relay to GPIO 18
 Buzzer to GPIO 23
 GSM module to a USB port
 
-#Train the model:
+4. Train the model:
 Run register_face.py to capture face images.
 Run train_faces.py to train the recognizer.
 
-Start the recognition system:
+
+5. Start the recognition system:
 python main.py
 
-#Usage
+
+# Usage
 
 Register Faces: Capture faces and save them to the dataset.
 Train Model: Generate a trained model using LBPH.
@@ -69,23 +74,31 @@ Run System: Recognize faces and control the door lock, alarm, and SMS notificati
 
 .
 ├── register_face.py         # Script for capturing and saving face images
+
 ├── train_faces.py           # Script for training the LBPH recognizer
+
 ├── main.py                  # Main script for real-time face recognition
+
 ├── face_recognizer.yml      # Trained model file (generated after training)
+
 ├── label_map.npy            # Label map for face recognition
+
 ├── requirements.txt         # Python dependencies
+
 ├── README.md                # Project documentation
 
 
-#Example AT Commands
+# Example AT Commands
 
 Set SMS Mode: AT+CMGF=1
 Send SMS: AT+CMGS="+1234567890"
 Check SIM Status: AT+CPIN?
 Check Network Registration: AT+CREG?
 
-#Future Enhancements:
+# Future Enhancements:
 
 Cloud-based face data storage.
 Integration with smart home ecosystems.
 Enhanced face detection using deep learning models.
+
+
